@@ -1,0 +1,1 @@
+<footer id="footer_info">Copyright © Your Company Name<footer>
