@@ -11,7 +11,7 @@
 <div id="templatemo_container">
   <div id="templatemo_left_column">
     <div id="templatemo_title">COOKING<span> WEBSITE</span></div>
-    <?php ?>
+    <?php include('partials/header.php') ?>
     <div id="templatemo_left_content">
       <h1>STUDENT SPECIALITY<br />
       <span>CHEAP & EASY RECIPES</span></h1>
@@ -49,7 +49,7 @@
         <li>Egg Fried Rice</li>
       </ul>
     </div>
-    <?php  ?>
+    <?php include('partials/footer.php')  ?>
   </div>
 </div>
 </body>

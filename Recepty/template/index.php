@@ -13,6 +13,7 @@
   <div id="templatemo_left_column">
     <div id="templatemo_title">COOKING<span> WEBSITE</span></div>
     <?php
+      include('partials/header.php')
     ?>
     <div id="templatemo_left_content">
       <h1>WELCOME<br />
@@ -69,6 +70,7 @@
     </div>
   </div>
   <?php
+    include('partials/footer.php')
   ?>
 </div>
 <!--  Designed by w w w . t e m p l a t e m o . c o m  -->

@@ -9,7 +9,7 @@
 <div id="templatemo_container">
   <div id="templatemo_left_column">
     <div id="templatemo_title">COOKING<span> WEBSITE</span></div>
-    <?php  ?>
+    <?php include('partials/header.php')  ?>
     <div id="templatemo_left_content">
       <h1>CONTACT<br />
       <span>STUDENT COOKING SUPPORT</span></h1>
@@ -44,7 +44,7 @@
         <li>Essential dorm cooking tools</li>
       </ul>
     </div>
-    <?php  ?>
+    <?php include('partials/footer.php') ?>
   </div>
 </div>
 </body>
