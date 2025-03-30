@@ -9,19 +9,76 @@
 <div id="templatemo_container">
   <div id="templatemo_left_column">
     <div id="templatemo_title">COOKING<span> WEBSITE</span></div>
-    <?php include('partials/header.php')  ?>
+    <?php include('partials/header.php') ?>
     <div id="templatemo_left_content">
       <h1>CONTACT<br />
       <span>STUDENT COOKING SUPPORT</span></h1>
       
-      <p><strong>Need help with dorm cooking?</strong> Send us your questions!</p>
+      <?php
+      $name = $email = $message = '';
+      $errors = [];
+      $success = false;
       
-      <form action="#" method="post">
-        <p>Name:<br /><input type="text" name="name" /></p>
-        <p>Email:<br /><input type="text" name="email" /></p>
-        <p>Message:<br /><textarea name="message" rows="5" cols="40"></textarea></p>
-        <input type="submit" value="Send Message" onclick="window.location.href='thankyou.php'; return false;" />
-      </form>
+      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          $name = trim($_POST['name'] ?? '');
+          $email = trim($_POST['email'] ?? '');
+          $message = trim($_POST['message'] ?? '');
+          
+          if (empty($name)) {
+              $errors[] = 'Name is required';
+          }
+          
+          if (empty($email)) {
+              $errors[] = 'Email is required';
+          } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+              $errors[] = 'Invalid email format';
+          }
+          
+          if (empty($message)) {
+              $errors[] = 'Message is required';
+          }
+          
+          if (empty($errors)) {
+
+              $success = true;
+          }
+      }
+      ?>
+      
+      <?php if ($success): ?>
+        <div class="success-message">
+          <p>Thank you for your message! We'll get back to you soon.</p>
+          <p><a href="contact.php">Send another message</a></p>
+        </div>
+      <?php else: ?>
+      
+        <?php if (!empty($errors)): ?>
+          <div class="error-message">
+            <h3>Please fix these errors:</h3>
+            <ul>
+              <?php foreach ($errors as $error): ?>
+                <li><?php echo htmlspecialchars($error); ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
+      
+        <p><strong>Need help with dorm cooking?</strong> Send us your questions!</p>
+        
+        <form action="contact.php" method="post">
+          <p>Name:<br />
+          <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" /></p>
+          
+          <p>Email:<br />
+          <input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>" /></p>
+          
+          <p>Message:<br />
+          <textarea name="message" rows="5" cols="40"><?php echo htmlspecialchars($message); ?></textarea></p>
+          
+          <input type="submit" value="Send Message" />
+        </form>
+        
+      <?php endif; ?>
     </div>
   </div>
   <div id="templatemo_right_column">
