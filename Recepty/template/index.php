@@ -12,19 +12,23 @@
 <div id="templatemo_container">
   <div id="templatemo_left_column">
     <div id="templatemo_title">COOKING<span> WEBSITE</span></div>
-    <div id="templatemo_header">
-      <div id="templatemo_header_slogan">YOUR COMPANY SLOGAN TEXT GOES HERE</div>
-    </div>
+    <?php
+    ?>
     <div id="templatemo_left_content">
       <h1>WELCOME<br />
-      <span>FREE COOKING WEBSITE LAYOUT</span></h1>
-      <p>This free CSS layout is provided by <a href="#">TemplateMo</a>. You may download, modify and use this layout for your websites. It would be helpful if you put a credit link back to TemplateMo.com website. Thank you.</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc quis sem nec tellus blandit tincidunt. Duis vitae velit sed dui malesuada dignissim. Donec mollis aliquet ligula. Maecenas adipiscing elementum ipsum. Pellentesque vitae magna. Sed nec est.</p>
+      <span>STUDENT COOKING RESOURCES</span></h1>
+      <p>This website provides simple, budget-friendly recipes perfect for students living in dormitories with limited cooking facilities.</p>
+      <p>All recipes require minimal equipment (just a microwave and maybe a hot plate) and use affordable ingredients available at any supermarket.</p>
       
-      <div class="templatemo_service">ABOUT OUR SERVICES</div>
-      <p>Cras sed leo tempor neque placerat pretium. Curabitur nec odio. Phasellus tincidunt, tortor lacinia blandit commodo, nunc augue mattis eros, ut convallis est augue vel orci. Nunc ante erat, varius eu, luctus ac, tristique nec, justo. Fusce dignissim eros ac massa. Phasellus ligula augue, vestibulum in, cursus non, euismod et, pede.    </p>
-      <div class="templatemo_aboutus">WHO WE ARE</div>
-      <p>Aliquam tristique lacus in sapien. Suspendisse potenti. Ut sed pede.  Nullam vitae tellus. Sed ultrices. Lorem ipsum dolor sit amet,  consectetuer adipiscing elit. Curabitur velit tellus, placerat et,  dapibus varius, aliquet quis, purus. Aliquam sagittis molestie sapien.  Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat.  Duis vitae velit. Ut ultricies. Fusce sollicitudin nisl a lectus.</p>
+      <div class="templatemo_service">GETTING STARTED</div>
+      <p>Check out our <a href="speciality_recipes.php">Speciality Recipes</a> section for quick meal ideas that cost less than $2 per serving and take less than 10 minutes to prepare.</p>
+      
+      <div class="templatemo_aboutus">ESSENTIAL TOOLS</div>
+      <p>- Microwave-safe bowl/mug<br />
+      - Can opener<br />
+      - Basic utensils<br />
+      - Small cutting board<br />
+      - Microwave or hot plate</p>
     </div>
   </div>
   <div id="templatemo_right_column">
@@ -32,12 +36,9 @@
     <div id="templatemo_menucolumn">
       <div class="templatemo_menu_list">
         <ul>
-          <li><a href="#">HOMEPAGE</a></li>
-          <li><a href="#">SPECIALITY  RECIPES</a></li>
-          <li><a href="#">COOKIES &amp; DESSERTS</a></li>
-          <li><a href="#">VEGETARIAN FOOD</a></li>
-          <li><a href="#">COOKING TIPS</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="index.php" class="current">DOMOV</a></li>
+          <li><a href="recepty.php">RECEPTY</a></li>
+          <li><a href="contact.php">KONTAKT</a></li>
         </ul>
       </div>
       
@@ -45,16 +46,16 @@
     <div id="templatemo_right_content">
         <h2>FEATURED TOPICS</h2>
         <ul>
-          <li><a href="#">Health and Nutrition</a></li>
-          <li><a href="#">Soups and Salads</a></li>
-          <li><a href="#">Breakfast Recipes</a></li>
-          <li><a href="#">Vegetarian Foods</a></li>
-          <li><a href="#">Cooking Tools</a></li>
+          <li><a href="speciality_recipes.php">5-Minute Microwave Meals</a></li>
+          <li><a href="speciality_recipes.php">Under $2 Recipes</a></li>
+          <li><a href="speciality_recipes.php">No-Refrigeration Foods</a></li>
+          <li><a href="speciality_recipes.php">One-Pot Meals</a></li>
+          <li><a href="contact_us.php">Cooking Questions?</a></li>
         </ul>
         <h2>NEWS &amp; EVENTS</h2>
         <p><img src="images/templatemo_photo3.jpg" alt="templatemo.com" width="183" height="70" /></p>
-        <p><strong>Cooking Show (24-12-2020</strong>)<br />
-        Fusce sollicitudin nisl a lectus. Pellentesque odio. Pellentesque  habitant morbi tristique senectus et netus et malesuada fames ac turpis  egestas. Sed leo. Duis suscipit lorem in risus.</p>
+        <p><strong>New Student Recipes (24-12-2023)</strong><br />
+        We've added 10 new microwave-friendly recipes perfect for dorm living. Check them out in our <a href="speciality_recipes.php">Speciality Recipes</a> section.</p>
       <p><a href="http://validator.w3.org/check?uri=referer"><img height="31" alt="Valid XHTML 1.0 Transitional" src="http://www.w3.org/Icons/valid-xhtml10" width="88" vspace="8" border="0" /></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS!" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" vspace="8" border="0" /></a></p>
     </div>
       
@@ -63,10 +64,12 @@
         <img src="images/templatemo_contact.png" alt="templatemo.com" width="46" height="73" /><br />
       Tel: 000-200-0022<br />
       Fax: 001-100-0011<br />
-      Email:   info [at] company.com<br />
+      Email: info [at] company.com<br />
+      <a href="contact_us.php">Contact Form</a>
     </div>
   </div>
-  <div id="templatemo_footer">Copyright © Your Company Name <!-- Credit: www.templatemo.com --></div>
+  <?php
+  ?>
 </div>
 <!--  Designed by w w w . t e m p l a t e m o . c o m  -->
 <!-- templatemo 036 cooking -->

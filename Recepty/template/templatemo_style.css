@@ -188,6 +188,8 @@ h2 {
 	background: #545e54;
 	font-weight: bold;
 	color: #FFFFFF;
+	position: relative;
+    margin-top: 0;
 }
 #templatemo_footer a {
 	color: #FFFFFF;
